@@ -6,7 +6,7 @@
         <div class="sidebarSection table-responsive">
             <table class="table">
                 <tr>
-                    <td>
+                    <td draggable = "true" (dragstart) = "dragstart($event)" id="button" >
                        <div class="align"> <span class="sb-icons sb-icon-button"></span></div>
                        <div class="alignText"> <span>BUTTON</span> </div>
                     </td>
@@ -20,7 +20,7 @@
                             <div class="align"><span class="sb-icons sb-icon-calendar align"></span></div>
                             <div class="alignText"><span>CALENDAR</span></div>
                     </td>
-                    <td>
+                    <td draggable = "true" (dragstart) = "dragstart($event)" id="datepicker" >
                             <div class="align"><span class="sb-icons sb-icon-datepicker align"></span></div>
                             <div class="alignText"><span>DATEPICKER</span></div>
                     </td>
@@ -70,7 +70,9 @@
     </div>
     <div class="col-md-6 sidebarSection">
         <div id="appContainer">
-            <div id="appContent" frameborder="0" tabindex="1"></div>
+            <div id="appContent" frameborder="0" tabindex="1" (dragover) = "dragover($event)"  (drop) = "drop($event)">
+                <div id="iframe" ></div>
+            </div>
         </div>
     </div>
     <div class="col-md-3"></div>
