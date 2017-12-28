@@ -69,26 +69,6 @@ content: "\e7d9"
     line-height: 17px;
 }
 
-.e-download {
-  float: right;
-  margin: 10px 40px 0 0;
-  color: #3f51b5;
-} 
-
-.e-btn .e-download-icon {
-  font-size: 15px;  
-}
-
-.e-btn:focus, .e-btn:hover, .e-btn:active {
-  background-color: #fafafa;
-  border-color: transparent;
-  color: #3f51b5;
-}
-
-.e-download-icon::before {
-  content: '\e752';
-}
-
 @font-face {
   font-family: 'sbicons';
   src: url('fonts/icons.ttf?gcjn6a') format('truetype'), url('fonts/icons.woff?gcjn6a') format('woff'), url('fonts/icons.svg?gcjn6a#sbicons') format('svg');
