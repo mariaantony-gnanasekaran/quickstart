@@ -41,8 +41,7 @@
     "systemjs": "0.19.40",
     "zone.js": "^0.8.4",
     "express": "*",
-    "express-easy-zip": "*",
-    "create-html": "*"
+    "express-easy-zip": "*"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",

@@ -1,20 +1,18 @@
 var fs = require('fs'),
     path = require('path')
     express = require('express'),
-    zip = require('express-easy-zip'),
-    createHTML = require('create-html');    
+    zip = require('express-easy-zip');
 
 // write html file
-var html = createHTML({
-    body: `<div class="col-md-12 sidebarSection">
-                <div id="appContainer">
-                    <div id="appContent" frameborder="0" tabindex="1" (dragover) = "dragover($event)"  (drop) = "drop($event)">
-                        <div id="iframe" ></div>
-                    </div>
-                </div>
-            </div>`
-});
-fs.writeFile('sample/src/app/app.component.html', html);
+fs.writeFile('sample/src/app/app.component.html', 
+    `<div class="col-md-12 sidebarSection">
+        <div id="appContainer">
+            <div id="appContent" frameborder="0" tabindex="1" (dragover) = "dragover($event)"  (drop) = "drop($event)">
+                <div id="iframe" ></div>
+            </div>
+        </div>
+    </div>`
+);
 
 // zip and download sample folder
 var app = express();
