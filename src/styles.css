@@ -329,28 +329,22 @@ content: "\e7d9"
       font-size: 25px;
     }
   }
-  
-  #ddlelement {
-    width:12% !important;
-    top:-60% !important;
-    left:75% !important;
-    position: relative;
-  } 
      
 #propertypanel label{
   font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
   font-weight: 300;
+    color: #9096a5;
+  }
+  #propertypanel .row {
+    height: 50px;
   }
    
-  #propertypanel .row {
-  height: 50px;
-  }
-   
-  #propertypanel {
-  margin-top: 50px;
+#propertypanel {
+  margin-top: 50px;
+  margin-left: 20px;
   overflow-y: scroll;
   margin-left: 25px;
-  }
+} 
 
   .spinner {
     margin: 100px auto;
@@ -404,4 +398,11 @@ content: "\e7d9"
       transform: scaleY(1.0);
       -webkit-transform: scaleY(1.0);
     }
+  }
+
+  #ddlelement{
+    width: 10%;
+    top: -90%;
+    left: 80%;
+    position: relative;
   }
