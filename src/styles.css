@@ -57,7 +57,7 @@ body{
 .viewHeaderMiddle, .propertyHeaderMiddle{
   text-align: center;
   height: 28px;
-  top: 48px;
+  top: 0;
   width: 100% !important;
   z-index: 5;
   color: #9096a5;
@@ -67,7 +67,7 @@ body{
 }
 
 .propertyHeaderMiddle {
-  width: 25% !important;
+  width: 100% !important;
   color: #9096a5;
 }
 
@@ -266,13 +266,14 @@ content: "\e7d9"
      
 #propertypanel label{
   font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-  font-weight: 500;
+  font-weight: 300;
   }
    
-  #propertypanel tr {
+  #propertypanel .row {
   height: 50px;
   }
    
   #propertypanel {
+  margin-top: 50px;
   overflow-y: scroll;
   }

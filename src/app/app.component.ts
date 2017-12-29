@@ -43,36 +43,69 @@ public components: string[] =[];
   // Property Panel
 
   private curInst: any;
+  private props: Array<string> = ['locale', 'cssClass', 'iconCss', 'floatLabelType', 'strictMode', 'showClearButton'];
 
   clickHandler(e: Event) {
     if ((e.target as Element).closest('.e-btn')) {
-      this.curInst = (e.target as any).closest('.e-btn').ej2_instances[0];
-      this.createPropertiesElement(this.curInst.properties);
-    } else if ((e.target as Element).closest('.e-checkbox')) {
-
+      this.createInstance((e.target as Element).closest('.e-btn'), '.e-btn');
     } else if ((e.target as Element).closest('.e-input')) {
-      this.curInst = (e.target as any).closest('.e-input').ej2_instances[0];
-      this.createPropertiesElement(this.curInst.properties);
+      this.createInstance((e.target as Element).closest('.e-input'), '.e-input');
+    } else if ((e.target as Element).closest('.e-chart')) {
+      this.createInstance((e.target as Element).closest('.e-chart'), '.e-chart');
+    } else if ((e.target as Element).closest('.e-grid')) {
+      this.createInstance((e.target as Element).closest('.e-grid'), '.e-grid');
+    } else if ((e.target as Element).closest('.e-input-group')) {
+      this.createInstance((e.target as Element).closest('.e-input-group'), '.e-input-group');
+    } else if ((e.target as Element).closest('.e-dialog')) {
+      this.createInstance((e.target as Element).closest('.e-dialog'), '.e-dialog');
+    } else if ((e.target as Element).closest('.e-listview')) {
+      this.createInstance((e.target as Element).closest('.e-listview'), '.e-listview');
+    } else if ((e.target as Element).closest('.e-accordion')) {
+      this.createInstance((e.target as Element).closest('.e-accordion'), '.e-accordion');
+    } else if ((e.target as Element).closest('.e-toolbar')) {
+      this.createInstance((e.target as Element).closest('.e-toolbar'), '.e-toolbar');
+    } else if ((e.target as Element).closest('.e-tab')) {
+      this.createInstance((e.target as Element).closest('.e-tab'), '.e-tab');
+    } else if ((e.target as Element).closest('.e-treeview')) {
+      this.createInstance((e.target as Element).closest('.e-treeview'), '.e-treeview');
     }
+  }
+
+  private createInstance(ele: any, className: string) {
+    if (this.isSameInstance((ele as any).closest(className))) {
+      return;
+    }
+    this.curInst = (ele as any).closest(className).ej2_instances[0];
+    this.createPropertiesElement(this.curInst.properties);
+  }
+
+  private isSameInstance(ele: any) {
+    return ele.ej2_instances[0] === this.curInst;
   }
 
   createPropertiesElement(objModel: Object) {
     let ele: Element = document.getElementById('propertypanel');
     let inputEle: Element;
-    let table: Element = createElement('table');
-    let tbody: Element = table.appendChild(createElement('tbody')) as Element;
+    let isApplicable: boolean;
+    let parentDiv: Element = createElement('div', { className: 'e-parent-group' } );
     ele.innerHTML = '';
-    ele.appendChild(table);
+    ele.appendChild(parentDiv);
     for (let key in objModel) {
-      if (typeof (objModel[key]) !== 'object') {
-        let tr: Element = createElement('tr');
-        tbody.appendChild(tr);
-        let td: Element = createElement('td');
+      isApplicable = true;
+      this.props.forEach((prop) => {
+        if (prop === key) {
+          isApplicable = false;
+        }
+      })
+      if (typeof (objModel[key]) !== 'object' && isApplicable) {
+        let tr: Element = createElement('div', { className: 'row marginZero' });
+        parentDiv.appendChild(tr);
+        let td: Element = createElement('div', { className: 'col-md-6 padding0' });
         td.appendChild(createElement('label', { innerHTML: key }));
         tr.appendChild(td);
         if (typeof (objModel[key]) === 'string') {
-          td = createElement('td');
-          let wrapper: Element = createElement('div', { className: 'e-input-group' })
+          td = createElement('div');
+          let wrapper: Element = createElement('div', { className: 'e-input-group col-md-6 padding0' });
           inputEle = createElement('input', { className: 'e-input', attrs: { 'property': key } });
           wrapper.appendChild(inputEle);
           td.appendChild(wrapper);
@@ -80,12 +113,12 @@ public components: string[] =[];
           this.addInputEventLister(inputEle);
           this.addEventListener(inputEle);
         } else if (typeof (objModel[key]) === 'boolean') {
-          td = createElement('td');
+          td = createElement('div');
           inputEle = createElement('input', { attrs: { 'property': key } });
           td.appendChild(inputEle);
           tr.appendChild(td);
           this.addEventListener(inputEle);
-          let checkbox: CheckBox = new CheckBox({}, inputEle as HTMLInputElement);
+          new CheckBox({checked:this.curInst[key]}, inputEle as HTMLInputElement);
         }
       }
     }
