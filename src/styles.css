@@ -25,6 +25,7 @@ body{
     height:560px;
 }
 .alignText{
+  color: #9096a5;
   text-align: center;
 }
 .header{
@@ -49,19 +50,17 @@ body{
   font-size: 18px;
   font-weight: 300;
   text-align: center;
-  position: fixed !important;
   top: 48px;
   width: 50% !important;
   z-index: 5;
 }
 .viewHeaderMiddle, .propertyHeaderMiddle{
   text-align: center;
-    height: 28px;
-    position: fixed !important;
-    top: 48px;
-    width: 50% !important;
-    z-index: 5;
-    color: #9096a5;
+  height: 28px;
+  top: 48px;
+  width: 100% !important;
+  z-index: 5;
+  color: #9096a5;
 }
 
 .propertyHeaderMiddle {
@@ -76,7 +75,14 @@ content: "\e7d9"
 .table-responsive .col-md-6.padding0 {
   margin-bottom: 16px;
 }
-
+.logo{
+  height: 35px;
+  float: left;
+  margin: 6px 40px 0 35px;
+  color: #3f51b5;
+  background-image: url(app/img/MappDesigner.png);
+  width: 80px;
+}
 
 #appContainer.ios, #appContainer.android, #appContainer.windows {
   width: 467px;
@@ -166,7 +172,7 @@ content: "\e7d9"
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .sb-icon-button::before {
@@ -183,8 +189,8 @@ content: "\e7d9"
   .sb-icon-datepicker:before {
     content: '\e90d';
   }
-  .sb-icon-combobox:before {
-    content: '\e908';
+  .sb-icon-dropdownlist:before {
+    content: '\e910';
   }
   .sb-icon-autocomplete:before {
     content: '\e903';
@@ -195,6 +201,15 @@ content: "\e7d9"
   .sb-icon-tooltip:before {
     content: '\e929';
   }
+  .sb-icon-grid:before {
+    content: '\e913';
+  }
+  .sb-icon-charts:before {
+    content: '\e906';
+}
+.sb-icon-toolbar:before {
+  content: '\e928';
+}
 
   .switchbtns {
     height: 40px;
