@@ -62,6 +62,9 @@ body{
   z-index: 5;
   color: #9096a5;
 }
+.sb-icons:hover {
+  transform: scale3d(1.15, 1.15, 1);
+}
 
 .propertyHeaderMiddle {
   width: 25% !important;
@@ -80,8 +83,8 @@ content: "\e7d9"
   float: left;
   margin: 6px 40px 0 35px;
   color: #3f51b5;
-  background-image: url(app/img/MappDesigner.png);
-  width: 80px;
+  background-image: url(app/img/logos.png);
+  width: 165px;
 }
 
 #appContainer.ios, #appContainer.android, #appContainer.windows {
