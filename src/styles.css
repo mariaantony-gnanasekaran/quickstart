@@ -82,13 +82,29 @@ body{
   z-index: 5;
   color: #9096a5;
 }
+.propertyChange{
+  user-select: none; 
+}
 .sb-icons:hover {
   transform: scale3d(1.15, 1.15, 1);
 }
-
+.sb-icons.sb-icon-listview:hover,
+.sb-icons.sb-icon-accordion:hover,
+.sb-icons.sb-icon-tab:hover,
+.sb-icons.sb-icon-treeview:hover {
+  transform: none;
+}
 .propertyHeaderMiddle {
   width: 100% !important;
-  color: #9096a5;
+    color: #9096a5;
+    border-right: 1px solid #dddada;
+    border-bottom: 1px solid #dddada;
+    text-align: center;
+    padding: 2px 0 2px 20px;
+    width: 100%;
+    color: #9096a5;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .e-home icon{
@@ -305,21 +321,20 @@ content: "\e7d9"
     }
   }
   
-
-     
-#propertypanel label{
-  font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-  font-weight: 300;
+  #propertypanel label{
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+    font-weight: 300;
+    color: #9096a5;
+  }
+  #propertypanel .row {
+    height: 50px;
   }
    
-  #propertypanel .row {
-  height: 50px;
-  }
-   
-  #propertypanel {
-  margin-top: 50px;
+#propertypanel {
+  margin-top: 50px;
+  margin-left: 20px;
   overflow-y: scroll;
-  }
+} 
 
   .spinner {
     margin: 100px auto;
@@ -373,4 +388,11 @@ content: "\e7d9"
       transform: scaleY(1.0);
       -webkit-transform: scaleY(1.0);
     }
+  }
+
+  #ddlelement{
+    width: 10%;
+    top: -90%;
+    left: 80%;
+    position: relative;
   }
