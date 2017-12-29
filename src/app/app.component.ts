@@ -198,4 +198,23 @@ export class AppComponent {
     }
   }
 
+  private specClickHandler(e: any) {
+    if (e.target.classList.contains('glyphicon-eye-open')) {
+    e.target.classList.add('active');
+    document.getElementsByClassName('glyphicon-phone')[0].classList.remove('active');
+    document.getElementsByClassName('middlepanel')[0].classList.remove('col-md-6');
+    document.getElementsByClassName('middlepanel')[0].classList.add('col-md-12');
+    document.getElementsByClassName('icontool')[0].style.display = 'none';
+    document.getElementsByClassName('propertypanel')[0].style.display = 'none';
+     
+    } else {
+    document.getElementsByClassName('glyphicon-eye-open')[0].classList.remove('active');
+    e.target.classList.add('active');
+    document.getElementsByClassName('icontool')[0].style.display = 'block'
+    document.getElementsByClassName('propertypanel')[0].style.display = 'block'
+    document.getElementsByClassName('middlepanel')[0].classList.remove('col-md-12');
+    document.getElementsByClassName('middlepanel')[0].classList.add('col-md-6');
+    }
+    }
+
 }
