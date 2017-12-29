@@ -99,7 +99,7 @@ content: "\e7d9"
   margin-bottom: 16px;
 }
 .logo{
-  height: 35px;
+  height: 40px;
   float: left;
   margin: 6px 40px 0 35px;
   color: #3f51b5;
@@ -168,15 +168,24 @@ content: "\e7d9"
     text-align: center;
     line-height: 17px;
 }
+#phone{
+  right:20px;
+}
+#phone:hover,#prespective:hover {
+  transform: scale3d(1.15, 1.15, 1);
+}
 
 .e-download {
+  padding: 0px 0px;
   float: right;
-  margin: 10px 0 0 0;
+  margin: 10px 0 0 0px;
   color: #3f51b5;
 } 
 
 .e-btn .e-download-icon {
   font-size: 15px;  
+  margin-left:0px !important;
+  width:25px;
 }
 
 .e-btn:focus, .e-btn:hover, .e-btn:active {
