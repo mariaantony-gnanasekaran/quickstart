@@ -28,11 +28,11 @@ public components: string[] =[];
     switch(id){
       case 'button':
       this.addComponent(ej2ButtonComponent);
-      this.components.push(id)
+      this.components.push(id);
       break;
       case 'datepicker':
       this.addComponent(ej2datepickerComponent)
-      this.components.push(id)
+      this.components.push(id);
       break;
     }
 
