@@ -34,7 +34,8 @@ body{
 .header,.content{
   border-bottom: 1px solid #dddada;
 }
-.viewHeader{
+.viewHeader{  
+  border-right: 1px solid #dddada;
   text-align: center;
   width: 100%;
   color: #9096a5;
@@ -48,18 +49,10 @@ body{
   font-size: 18px;
   font-weight: 300;
   text-align: center;
-  height: 20px;
   position: fixed !important;
   top: 48px;
   width: 50% !important;
   z-index: 5;
-    height: 28px;
-    width: 100%;
-    border-style: solid;
-    border-color:black;
-    border-width: 0px 1px 1px 0;
-    background: black;
-    color: #fff;
 }
 .viewHeaderMiddle, .propertyHeaderMiddle{
   text-align: center;
@@ -68,14 +61,12 @@ body{
     top: 48px;
     width: 50% !important;
     z-index: 5;
-    background: black;
-    color: #fff;
+    color: #9096a5;
 }
 
 .propertyHeaderMiddle {
   width: 25% !important;
-  background: black;
-    color: #fff;
+  color: #9096a5;
 }
 
 .e-home icon{
@@ -255,4 +246,19 @@ content: "\e7d9"
     .sb-icons {
       font-size: 25px;
     }
+  }
+  
+
+     
+#propertypanel label{
+  font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+  font-weight: 500;
+  }
+   
+  #propertypanel tr {
+  height: 50px;
+  }
+   
+  #propertypanel {
+  overflow-y: scroll;
   }

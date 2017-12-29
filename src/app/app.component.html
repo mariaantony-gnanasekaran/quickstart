@@ -1,6 +1,7 @@
 <div class="row header">
     <span class="sb-icons sb-icons-home icon "></span>
-    <a class="e-btn e-download" href="http://localhost:4000"><span class="e-icons e-download-icon e-icon-left e-btn-icon"></span>Download</a>
+    <a class="e-btn e-download" href="http://localhost:4000">
+        <span class="e-icons e-download-icon e-icon-left e-btn-icon"></span>Download</a>
 </div>
 <div class="row content">
     <div class="col-md-3 padding0 icontool">
@@ -28,7 +29,7 @@
                     </div>
                 </div>
                 <div class="row marginZero">
-                        <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0">
                         <div class="align">
                             <span class="sb-icons sb-icon-calendar align"></span>
                         </div>
@@ -46,7 +47,7 @@
                     </div>
                 </div>
                 <div class="row marginZero">
-                        <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0">
                         <div class="align">
                             <span class="sb-icons sb-icon-combobox align"></span>
                         </div>
@@ -64,7 +65,7 @@
                     </div>
                 </div>
                 <div class="row marginZero">
-                        <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0">
                         <div class="align">
                             <span class="sb-icons sb-icon-dialog align"></span>
                         </div>
@@ -82,7 +83,7 @@
                     </div>
                 </div>
                 <div class="row marginZero">
-                        <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0">
                         <div class="align">
                             <span class="sb-icons sb-icon-listview align"></span>
                         </div>
@@ -100,7 +101,7 @@
                     </div>
                 </div>
                 <div class="row marginZero">
-                        <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0">
                         <div class="align">
                             <span class="sb-icons sb-icon-accordion align"></span>
                         </div>
@@ -121,19 +122,21 @@
         </div>
     </div>
     <div class="col-md-6 padding0 sidebarSection viewHeaderContainer">
-        
+
         <div class="viewHeaderMiddle">
             <div class="switchbtns">
-                <div class="platform-preview"> <div class="platform-toggle">
-                    <a onclick="setPlatform('ios', event)" class="active">iOS</a>
-                    <a onclick="setPlatform('android', event)" class="">Android</a>
-                    <a onclick="setPlatform('windows', event)" class="">Windows</a>
-                </div></div>
+                <div class="platform-preview">
+                    <div class="platform-toggle">
+                        <a onclick="setPlatform('ios', event)" class="active">iOS</a>
+                        <a onclick="setPlatform('android', event)" class="">Android</a>
+                        <a onclick="setPlatform('windows', event)" class="">Windows</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="appContainer" class="ios">
             <div id="appContent" frameborder="0" tabindex="1" (dragover)="dragover($event)" (drop)="drop($event)">
-                <div id="iframe"></div>
+                <div id="iframe" (click)='clickHandler($event)'></div>
             </div>
         </div>
     </div>
@@ -141,5 +144,6 @@
         <div class="col-md-3 viewHeaderMiddle propertyHeaderMiddle padding0">
             <span>Property</span>
         </div>
+        <div id='propertypanel'></div>
     </div>
 </div>
