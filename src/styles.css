@@ -204,24 +204,20 @@ content: "\e7d9"
   }
 
   .platform-preview .platform-toggle a {
+    color: #9096a5;
     cursor: pointer;
     display: inline-block;
     padding: 4px 16px;
-    border-radius: 16px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 300; 
     -webkit-font-smoothing: antialiased;
     transition: .2s color, .2s background-color;
+    text-decoration: none;
   }
 
-  .platform-preview .platform-toggle a:hover {
-    background-color: #f5f5f5;
-    color: #06c0ee;
-  }
-
-  .platform-preview .platform-toggle a.active, .platform-preview .platform-toggle a:active {
-    background-color: #0c60ee;
-    color: #fff;
+  .platform-preview .platform-toggle a.active, .platform-preview .platform-toggle a:active, .platform-preview .platform-toggle a:hover {
+    border-bottom: 1px solid #3f51b5;
+    color: #337ab7;
   } 
   
   .sb-icon-listview:before {
