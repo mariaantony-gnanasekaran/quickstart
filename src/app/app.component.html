@@ -138,6 +138,9 @@
                     </div>
                 </div>
             </div>
+            <div id='ddlelement'>
+                <ej-dropdownlist id='ddlelement' [dataSource]='data' (change)='sizeChangeHandler($event)' text="100%"></ej-dropdownlist>
+            </div> 
         </div>
         <div id="appContainer" class="ios">
             <div id="appContent" frameborder="0" tabindex="1" (dragover)="dragover($event)" (drop)="drop($event)">

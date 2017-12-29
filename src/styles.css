@@ -82,6 +82,15 @@ body{
   z-index: 5;
   color: #9096a5;
 }
+.ej2component {
+  padding: 10px;
+}
+#iframe .e-calendar{
+  max-width: 100% !important;
+}
+#appContent{
+  overflow: auto;
+}
 .propertyChange{
   user-select: none; 
 }
@@ -321,7 +330,12 @@ content: "\e7d9"
     }
   }
   
-
+  #ddlelement {
+    width:12% !important;
+    top:-60% !important;
+    left:75% !important;
+    position: relative;
+  } 
      
 #propertypanel label{
   font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
@@ -335,6 +349,7 @@ content: "\e7d9"
   #propertypanel {
   margin-top: 50px;
   overflow-y: scroll;
+  margin-left: 25px;
   }
 
   .spinner {
@@ -375,7 +390,7 @@ content: "\e7d9"
     -webkit-animation-delay: -0.8s;
     animation-delay: -0.8s;
   }
-  
+
   @-webkit-keyframes sk-stretchdelay {
     0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
     20% { -webkit-transform: scaleY(1.0) }
