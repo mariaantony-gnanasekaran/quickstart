@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 @Component({
     selector: 'component',
-    template: `<div class= "ej2component"><ej-accumulationchart >
+    template: `<div class= "PieChart"><ej-accumulationchart >
     <e-accumulation-series-collection>
         <e-accumulation-series [dataSource]='chartData' xName='x' yName='y'></e-accumulation-series>
     </e-accumulation-series-collection>
 </ej-accumulationchart></div>`,
+styles : [`ej-accumulationchart { display: block; height: 200px;}`]
 })
 export class ej2ChartComponent {
     public chartData = [

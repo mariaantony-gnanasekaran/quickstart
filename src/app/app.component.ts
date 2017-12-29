@@ -9,11 +9,13 @@ import { ej2DropdownComponent } from './dropdown.component';
 import { ej2ToolbarComponent } from './toolbar.component';
 import { debug } from 'util';
 import { Element } from '@angular/compiler';
+import { ej2CalendarComponent } from './calendar.component';
+import { ej2PagerComponent } from './pager.component';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  entryComponents: [ej2ButtonComponent, ej2datepickerComponent, ej2GridComponent, ej2ChartComponent, ej2DropdownComponent, ej2ToolbarComponent],
+  entryComponents: [ej2ButtonComponent, ej2datepickerComponent, ej2GridComponent, ej2ChartComponent, ej2DropdownComponent, ej2ToolbarComponent, ej2CalendarComponent, ej2PagerComponent],
 })
 export class AppComponent {
   public ej2Elements: string = '';
@@ -55,6 +57,12 @@ export class AppComponent {
         break;
       case 'toolbar':
         this.addComponent(ej2ToolbarComponent)
+        break;
+        case 'calendar':
+        this.addComponent(ej2CalendarComponent)
+        break;
+        case 'pager':
+        this.addComponent(ej2PagerComponent)
         break;
     }
 

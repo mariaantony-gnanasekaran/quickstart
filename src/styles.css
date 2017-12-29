@@ -1,4 +1,4 @@
-@import "../node_modules/@syncfusion/ej2/material.css";
+@import "./material.css";
 .resize{
   resize: both;
   overflow: auto;
@@ -82,13 +82,29 @@ body{
   z-index: 5;
   color: #9096a5;
 }
+.propertyChange{
+  user-select: none; 
+}
 .sb-icons:hover {
   transform: scale3d(1.15, 1.15, 1);
 }
-
+.sb-icons.sb-icon-listview:hover,
+.sb-icons.sb-icon-accordion:hover,
+.sb-icons.sb-icon-tab:hover,
+.sb-icons.sb-icon-treeview:hover {
+  transform: none;
+}
 .propertyHeaderMiddle {
   width: 100% !important;
-  color: #9096a5;
+    color: #9096a5;
+    border-right: 1px solid #dddada;
+    border-bottom: 1px solid #dddada;
+    text-align: center;
+    padding: 2px 0 2px 20px;
+    width: 100%;
+    color: #9096a5;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .e-home icon{
@@ -99,7 +115,7 @@ content: "\e7d9"
   margin-bottom: 16px;
 }
 .logo{
-  height: 35px;
+  height: 40px;
   float: left;
   margin: 6px 40px 0 35px;
   color: #3f51b5;
@@ -168,15 +184,24 @@ content: "\e7d9"
     text-align: center;
     line-height: 17px;
 }
+#phone{
+  right:20px;
+}
+#phone:hover,#prespective:hover {
+  transform: scale3d(1.15, 1.15, 1);
+}
 
 .e-download {
+  padding: 0px 0px;
   float: right;
-  margin: 10px 0 0 0;
+  margin: 10px 0 0 0px;
   color: #3f51b5;
 } 
 
 .e-btn .e-download-icon {
   font-size: 15px;  
+  margin-left:0px !important;
+  width:25px;
 }
 
 .e-btn:focus, .e-btn:hover, .e-btn:active {
@@ -304,15 +329,70 @@ content: "\e7d9"
   #propertypanel .row {
     height: 50px;
   }
-  #propertypanel {
-    margin-top: 50px;
-    margin-left: 20px;
-    overflow-y: scroll;
-  } 
+   
+#propertypanel {
+  margin-top: 50px;
+  margin-left: 20px;
+  overflow-y: scroll;
+} 
+
+  .spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 25%;
+  }
+  
+  .spinner > div {
+    background-color: #369;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
 
   #ddlelement{
     width: 10%;
     top: -90%;
     left: 80%;
     position: relative;
- }
+  }
