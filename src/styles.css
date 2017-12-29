@@ -50,19 +50,17 @@ body{
   font-size: 18px;
   font-weight: 300;
   text-align: center;
-  position: fixed !important;
   top: 48px;
   width: 50% !important;
   z-index: 5;
 }
 .viewHeaderMiddle, .propertyHeaderMiddle{
   text-align: center;
-    height: 28px;
-    position: fixed !important;
-    top: 48px;
-    width: 50% !important;
-    z-index: 5;
-    color: #9096a5;
+  height: 28px;
+  top: 48px;
+  width: 100% !important;
+  z-index: 5;
+  color: #9096a5;
 }
 
 .propertyHeaderMiddle {
