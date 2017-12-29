@@ -29,8 +29,16 @@ body{
   text-align: center;
 }
 .header{
+  text-align: center;
   height:48px;
   background-color: #3f51b5;
+}
+
+.header .prespective{
+  top:7px;
+  color:#fff;
+  font-size: 30px;
+  text-align: center;
 }
 .header,.content{
   border-bottom: 1px solid #dddada;
@@ -220,6 +228,9 @@ content: "\e7d9"
 }
 .sb-icon-toolbar:before {
   content: '\e928';
+}
+.glyphicon-eye-open:before {
+  content: "\e105";
 }
 
   .switchbtns {
