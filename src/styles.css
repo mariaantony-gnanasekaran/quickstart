@@ -36,23 +36,23 @@ body{
 }
 .viewHeader{
   text-align: center;
-    height: 20px;
-    width: 100%;
-    border-style: solid;
-    border-color:black;
-    border-width: 0px 1px 1px 0;
-    background: black;
-    color: #fff;
+  width: 100%;
+  color: #9096a5;
+  font-size: 18px;
+  font-weight: 300;
 }
 .viewHeaderMiddle, .propertyHeaderMiddle{
   text-align: center;
-    height: 20px;
-    position: fixed !important;
-    top: 48px;
-    width: 50% !important;
-    z-index: 5;
-    background: black;
-    color: #fff;
+  width: 100%;
+  color: #9096a5;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  height: 20px;
+  position: fixed !important;
+  top: 48px;
+  width: 50% !important;
+  z-index: 5;
 }
 
 .propertyHeaderMiddle {
@@ -148,7 +148,6 @@ content: "\e7d9"
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    padding-right: 15px;
     font-size: 40px;
   }
 
