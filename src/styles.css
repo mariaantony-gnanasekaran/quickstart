@@ -10,6 +10,15 @@ body{
   width:100%;
   overflow: hidden;
 }
+
+.marginZero {
+  margin: 0px !important;
+}
+
+.padding0{
+  padding: 0px !important;
+}
+
 .sidebarSection{
   border-right: 1px solid #dddada;
     overflow: auto;
@@ -25,9 +34,41 @@ body{
 .header,.content{
   border-bottom: 1px solid #dddada;
 }
+.viewHeader{
+  text-align: center;
+    height: 20px;
+    width: 100%;
+    border-style: solid;
+    border-color:black;
+    border-width: 0px 1px 1px 0;
+    background: black;
+    color: #fff;
+}
+.viewHeaderMiddle, .propertyHeaderMiddle{
+  text-align: center;
+    height: 20px;
+    position: fixed !important;
+    top: 48px;
+    width: 50% !important;
+    z-index: 5;
+    background: black;
+    color: #fff;
+}
+
+.propertyHeaderMiddle {
+  width: 25% !important;
+  background: black;
+    color: #fff;
+}
+
 .e-home icon{
 content: "\e7d9"
 }
+
+.table-responsive .col-md-6.padding0 {
+  margin-bottom: 16px;
+}
+
 
 #appContainer {
   width: 467px;
@@ -48,6 +89,10 @@ content: "\e7d9"
 }
 .sidebarSection .table>tbody>tr>td{
   border:none;
+}
+
+.viewHeaderContainer{
+  position: relative;
 }
 
 .e-btn-icon::before {
@@ -144,4 +189,22 @@ content: "\e7d9"
   }
   .sb-icon-treeview:before {
     content: '\e92b';
+  }
+
+  @media only screen and (max-width: 767px) {
+    .icontool {
+        width: 20%;
+        font-size: 8px;
+    }
+
+    .sb-icons {
+      font-size: 25px;
+    }
+
+    .table-responsive .col-md-6.padding0 .alignText {
+      
+    }
+
+    
+
   }

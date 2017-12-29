@@ -3,78 +3,138 @@
     <a class="e-btn e-download" href="http://localhost:4000"><span class="e-icons e-download-icon e-icon-left e-btn-icon"></span>Download</a>
 </div>
 <div class="row content">
-    <div class="col-md-3">
-        <div class="sidebarSection table-responsive">
-            <table class="table">
-                <tr>
-                    <td draggable = "true" (dragstart) = "dragstart($event)" id="button" >
-                       <div class="align"> <span class="sb-icons sb-icon-button"></span></div>
-                       <div class="alignText"> <span>BUTTON</span> </div>
-                    </td>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-textbox align"></span></div>
-                            <div class="alignText"><span>TEXTBOX</span></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-calendar align"></span></div>
-                            <div class="alignText"><span>CALENDAR</span></div>
-                    </td>
-                    <td draggable = "true" (dragstart) = "dragstart($event)" id="datepicker" >
-                            <div class="align"><span class="sb-icons sb-icon-datepicker align"></span></div>
-                            <div class="alignText"><span>DATEPICKER</span></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-combobox align"></span></div>
-                            <div class="alignText"><span>COMBOBOX</span></div>
-                    </td>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-autocomplete align"></span></div>
-                            <div class="alignText"><span>AUTOCOMPLETE</span></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-dialog align"></span></div>
-                            <div class="alignText"><span>DIALOG</span></div>
-                    </td>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-tooltip align"></span></div>
-                            <div class="alignText"><span>TOOLTIP</span></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-listview align"></span></div>
-                            <div class="alignText"><span>LISTVIEW</span></div>
-                    </td>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-tab align"></span></div>
-                            <div class="alignText"><span>TAB</span></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-accordion align"></span></div>
-                            <div class="alignText"><span>ACCORDION</span></div>
-                    </td>
-                    <td>
-                            <div class="align"><span class="sb-icons sb-icon-treeview align"></span></div>
-                            <div class="alignText"><span>TREEVIEW</span></div>
-                    </td>
-                </tr>
-            </table>
+    <div class="col-md-3 padding0 icontool">
+        <div class="viewHeader">
+            <span>component</span>
         </div>
-    </div>
-    <div class="col-md-6 sidebarSection">
-        <div id="appContainer">
-            <div id="appContent" frameborder="0" tabindex="1" (dragover) = "dragover($event)"  (drop) = "drop($event)">
-                <div id="iframe" ></div>
+        <div class="sidebarSection table-responsive">
+            <div class="table">
+                <div class="row marginZero">
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="button">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-button"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>BUTTON</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-textbox align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>TEXTBOX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginZero">
+                        <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-calendar align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>CALENDAR</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="datepicker">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-datepicker align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>DATEPICKER</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginZero">
+                        <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-combobox align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>COMBOBOX</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-autocomplete align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>AUTOCOMPLETE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginZero">
+                        <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-dialog align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>DIALOG</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-tooltip align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>TOOLTIP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginZero">
+                        <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-listview align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>LISTVIEW</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-tab align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>TAB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginZero">
+                        <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-accordion align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>ACCORDION</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding0">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-treeview align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>TREEVIEW</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-6 padding0 sidebarSection viewHeaderContainer">
+        
+    <div class="viewHeaderMiddle">
+            <span>Device</span>
+        </div>
+    
+        <div id="appContainer">
+            <div id="appContent" frameborder="0" tabindex="1" (dragover)="dragover($event)" (drop)="drop($event)">
+                <div id="iframe"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 padding0 viewHeaderContainer">
+        <div class="col-md-3 viewHeaderMiddle propertyHeaderMiddle padding0">
+            <span>Property</span>
+        </div>
+    </div>
 </div>
