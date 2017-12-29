@@ -1,4 +1,5 @@
 <div class="row header">
+    <span class="logo"></span>
     <span class="sb-icons sb-icons-home icon "></span>
     <a class="e-btn e-download" href="http://localhost:4000">
         <span class="e-icons e-download-icon e-icon-left e-btn-icon"></span>Download</a>
@@ -11,6 +12,32 @@
         <div class="sidebarSection table-responsive">
             <div class="table">
                 <div class="row marginZero">
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="grid">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-grid align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>	Grid</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="chart">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-charts align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>	Chart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginZero">
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="toolbar">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-toolbar align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>Toolbar</span>
+                        </div>
+                    </div>
                     <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="button">
                         <div class="align">
                             <span class="sb-icons sb-icon-button"></span>
@@ -19,17 +46,17 @@
                             <span>Button</span>
                         </div>
                     </div>
-                    <div class="col-md-6 padding0">
-                        <div class="align">
-                            <span class="sb-icons sb-icon-textbox align"></span>
-                        </div>
-                        <div class="alignText">
-                            <span>TextBox</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="row marginZero">
-                    <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="dropdownlist">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-dropdownlist"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>DropDownList</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="textbox">
                         <div class="align">
                             <span class="sb-icons sb-icon-calendar align"></span>
                         </div>
@@ -37,35 +64,17 @@
                             <span>Calendar</span>
                         </div>
                     </div>
+                </div>
+                <div class="row marginZero">
                     <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="datepicker">
                         <div class="align">
                             <span class="sb-icons sb-icon-datepicker align"></span>
                         </div>
                         <div class="alignText">
-                            <span>Datepicker</span>
+                            <span>DatePicker</span>
                         </div>
                     </div>
-                </div>
-                <div class="row marginZero">
-                    <div class="col-md-6 padding0">
-                        <div class="align">
-                            <span class="sb-icons sb-icon-combobox align"></span>
-                        </div>
-                        <div class="alignText">
-                            <span>Combobox</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6 padding0">
-                        <div class="align">
-                            <span class="sb-icons sb-icon-autocomplete align"></span>
-                        </div>
-                        <div class="alignText">
-                            <span>Autocomplete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row marginZero">
-                    <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="dialog">
                         <div class="align">
                             <span class="sb-icons sb-icon-dialog align"></span>
                         </div>
@@ -73,25 +82,28 @@
                             <span>Dialog</span>
                         </div>
                     </div>
-                    <div class="col-md-6 padding0">
-                        <div class="align">
-                            <span class="sb-icons sb-icon-tooltip align"></span>
-                        </div>
-                        <div class="alignText">
-                            <span>Tooltip</span>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="row marginZero">
-                    <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="listview">
                         <div class="align">
                             <span class="sb-icons sb-icon-listview align"></span>
                         </div>
                         <div class="alignText">
-                            <span>Listvieew</span>
+                            <span>ListView</span>
                         </div>
                     </div>
-                    <div class="col-md-6 padding0">
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="accordion">
+                        <div class="align">
+                            <span class="sb-icons sb-icon-accordion align"></span>
+                        </div>
+                        <div class="alignText">
+                            <span>Accordion</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginZero">
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="tab">
                         <div class="align">
                             <span class="sb-icons sb-icon-tab align"></span>
                         </div>
@@ -99,22 +111,13 @@
                             <span>Tab</span>
                         </div>
                     </div>
-                </div>
-                <div class="row marginZero">
-                    <div class="col-md-6 padding0">
-                        <div class="align">
-                            <span class="sb-icons sb-icon-accordion align"></span>
-                        </div>
-                        <div class="alignText">
-                            <span>Accordian</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6 padding0">
+
+                    <div class="col-md-6 padding0" draggable="true" (dragstart)="dragstart($event)" id="treeview">
                         <div class="align">
                             <span class="sb-icons sb-icon-treeview align"></span>
                         </div>
                         <div class="alignText">
-                            <span>Treeview</span>
+                            <span>TreeView</span>
                         </div>
                     </div>
                 </div>
