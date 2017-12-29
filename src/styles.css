@@ -36,7 +36,7 @@ body{
 }
 .viewHeader{
   text-align: center;
-    height: 20px;
+    height: 28px;
     width: 100%;
     border-style: solid;
     border-color:black;
@@ -46,7 +46,7 @@ body{
 }
 .viewHeaderMiddle, .propertyHeaderMiddle{
   text-align: center;
-    height: 20px;
+    height: 28px;
     position: fixed !important;
     top: 48px;
     width: 50% !important;
@@ -70,13 +70,22 @@ content: "\e7d9"
 }
 
 
-#appContainer {
+#appContainer.ios, #appContainer.android, #appContainer.windows {
   width: 467px;
   height: 870px;
   background-image: url('app/img/devices-sprite.png');
   background-size: 470px;
-  margin: 0 auto;
+  margin: 25px auto;
   position: relative;
+}
+
+#appContainer.android {
+    height: 845px !important;
+    background-position: center center;
+}
+
+#appContainer.windows {
+  background-position: center bottom;
 }
 
 #appContent {
@@ -87,6 +96,7 @@ content: "\e7d9"
   left: 61px;
   position: absolute;
 }
+
 .sidebarSection .table>tbody>tr>td{
   border:none;
 }
@@ -178,6 +188,35 @@ content: "\e7d9"
   .sb-icon-tooltip:before {
     content: '\e929';
   }
+
+  .switchbtns {
+    height: 40px;
+    position: relative;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    margin-bottom: -26px;
+  }
+
+  .platform-preview .platform-toggle a {
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    transition: .2s color, .2s background-color;
+  }
+
+  .platform-preview .platform-toggle a:hover {
+    background-color: #f5f5f5;
+    color: #06c0ee;
+  }
+
+  .platform-preview .platform-toggle a.active, .platform-preview .platform-toggle a:active {
+    background-color: #0c60ee;
+    color: #fff;
+  } 
+  
   .sb-icon-listview:before {
     content: '\e917';
   }
