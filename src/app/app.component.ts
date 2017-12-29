@@ -181,26 +181,6 @@ export class AppComponent {
     target.currentTarget.parentElement.classList.remove('e-input-focus');
   }
 
-<<<<<<< HEAD
-private sizeChangeHandler(e: any) {
-  let elem: any = document.getElementById('appContainer');
-  if (e.itemData === '90%') {
-  elem.style.transform = 'scale(0.90,0.90)';
-  elem.style.marginTop = ((elem.offsetHeight * 0.9) - elem.offsetHeight) / 2 + 'px';
-  } else if (e.itemData === '75%') {
-  elem.style.transform = 'scale(0.75,0.75)';
-  elem.style.marginTop = ((elem.offsetHeight * 0.75) - elem.offsetHeight) / 2 + 'px';
-  } else if (e.itemData === '50%') {
-  elem.style.transform = 'scale(0.50,0.50)';
-  elem.style.marginTop = ((elem.offsetHeight * 0.50) - elem.offsetHeight) / 2 + 'px';
-  } else {
-  document.getElementById('appContainer').style.transform = 'scale(1,1)';
-  elem.style.marginTop = ((elem.offsetHeight * 1) - elem.offsetHeight) / 2 + 'px';
-  }
-} 
- 
-
-=======
   private sizeChangeHandler(e: any) {
     let elem: any = document.getElementById('appContainer');
     if (e.itemData === '90%') {
@@ -217,6 +197,5 @@ private sizeChangeHandler(e: any) {
       elem.style.marginTop = ((elem.offsetHeight * 1) - elem.offsetHeight) / 2 + 'px';
     }
   }
->>>>>>> 84cacfac5ca384028e508b1355346b7f51c85719
 
 }

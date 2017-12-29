@@ -335,14 +335,14 @@ content: "\e7d9"
   font-weight: 300;
     color: #9096a5;
   }
-  #propertypanel .row {
-    height: 50px;
+  #propertypanel .row.marginZero{
+    height: 50px;
   }
    
-#propertypanel {
-  margin-top: 50px;
-  margin-left: 20px;
-  overflow-y: scroll;
+#propertypanel{
+  margin-top: 50px;
+  margin-left:20px;
+  overflow-y: auto;
   margin-left: 25px;
 } 
 
