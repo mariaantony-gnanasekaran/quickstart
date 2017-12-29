@@ -296,18 +296,23 @@ content: "\e7d9"
     }
   }
   
+  #propertypanel label{
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+    font-weight: 300;
+    color: #9096a5;
+  }
+  #propertypanel .row {
+    height: 50px;
+  }
+  #propertypanel {
+    margin-top: 50px;
+    margin-left: 20px;
+    overflow-y: scroll;
+  } 
 
-     
-#propertypanel label{
-  font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-  font-weight: 300;
-  }
-   
-  #propertypanel .row {
-  height: 50px;
-  }
-   
-  #propertypanel {
-  margin-top: 50px;
-  overflow-y: scroll;
-  }
+  #ddlelement{
+    width: 10%;
+    top: -90%;
+    left: 80%;
+    position: relative;
+ }

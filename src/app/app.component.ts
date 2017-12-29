@@ -7,6 +7,8 @@ import { ej2GridComponent } from './grid.component';
 import { ej2ChartComponent } from './chart.component';
 import { ej2DropdownComponent } from './dropdown.component';
 import { ej2ToolbarComponent } from './toolbar.component';
+import { debug } from 'util';
+import { Element } from '@angular/compiler';
 
 @Component({
   selector: 'my-app',
@@ -15,8 +17,9 @@ import { ej2ToolbarComponent } from './toolbar.component';
 })
 export class AppComponent {
   public ej2Elements: string = '';
+  // defined the array of data
+  public data: string[] = ['100%', '90%', '75%', '50%'];
   constructor(private componentResolver: ComponentFactoryResolver, protected viewContainerRef: ViewContainerRef) { }
-
   public addComponent(ej2Component: any) {
     let componentFactory = this.componentResolver.resolveComponentFactory(ej2Component);
     const ref = this.viewContainerRef.createComponent(componentFactory);
@@ -121,7 +124,7 @@ export class AppComponent {
         let td: Element = createElement('div', { className: 'col-md-6 padding0' });
         td.appendChild(createElement('label', { innerHTML: key }));
         tr.appendChild(td);
-        if (typeof (objModel[key]) === 'string') {
+        if (typeof (objModel[key]) === 'string' || typeof (objModel[key]) === 'number') {
           td = createElement('div');
           let wrapper: Element = createElement('div', { className: 'e-input-group col-md-6 padding0' });
           inputEle = createElement('input', { className: 'e-input', attrs: { 'property': key } });
@@ -168,6 +171,23 @@ export class AppComponent {
   //FocusOut Event function for input component
   public focusOut(target: any): void {
     target.currentTarget.parentElement.classList.remove('e-input-focus');
+  }
+
+  private sizeChangeHandler(e: any) {
+    let elem: any = document.getElementById('appContainer');
+    if (e.itemData === '90%') {
+      elem.style.transform = 'scale(0.90,0.90)';
+      elem.style.marginTop = ((elem.offsetHeight * 0.9) - elem.offsetHeight) / 2 + 'px';
+    } else if (e.itemData === '75%') {
+      elem.style.transform = 'scale(0.75,0.75)';
+      elem.style.marginTop = ((elem.offsetHeight * 0.75) - elem.offsetHeight) / 2 + 'px';
+    } else if (e.itemData === '50%') {
+      elem.style.transform = 'scale(0.50,0.50)';
+      elem.style.marginTop = ((elem.offsetHeight * 0.50) - elem.offsetHeight) / 2 + 'px';
+    } else {
+      document.getElementById('appContainer').style.transform = 'scale(1,1)';
+      elem.style.marginTop = ((elem.offsetHeight * 1) - elem.offsetHeight) / 2 + 'px';
+    }
   }
 
 }

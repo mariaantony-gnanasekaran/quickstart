@@ -137,6 +137,9 @@
                         <a onclick="setPlatform('windows', event)" class="">Windows</a>
                     </div>
                 </div>
+                <div id='ddlelement'>
+                    <ej-dropdownlist id='ddlelement' [dataSource]='data' (change)='sizeChangeHandler($event)' text="100%"></ej-dropdownlist>
+                </div>
             </div>
         </div>
         <div id="appContainer" class="ios">
