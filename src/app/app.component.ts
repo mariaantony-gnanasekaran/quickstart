@@ -1,22 +1,36 @@
 import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
+<<<<<<< HEAD
+import { createElement, EventHandler } from '@syncfusion/ej2-base';
+import { CheckBox } from '@syncfusion/ej2-ng-buttons';
+import { ej2ButtonComponent } from './button.component';
+import { ej2datepickerComponent } from './datepicker.component';
+import { ej2GridComponent } from './grid.component';
+import { ej2ChartComponent } from './chart.component';
+import { ej2DropdownComponent } from './dropdown.component';
+import { ej2ToolbarComponent } from './toolbar.component';
+=======
 import { ej2ButtonComponent } from './button.component'
 import { ej2datepickerComponent } from './datepicker.component'
 import { CheckBox } from '@syncfusion/ej2-ng-buttons';
 import { createElement, EventHandler } from '@syncfusion/ej2-base';
+>>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  entryComponents: [ej2ButtonComponent, ej2datepickerComponent],
+  entryComponents: [ej2ButtonComponent, ej2datepickerComponent, ej2GridComponent, ej2ChartComponent, ej2DropdownComponent, ej2ToolbarComponent],
 })
 export class AppComponent {
-public components: string[] =[];
+  public ej2Elements: string = '';
   constructor(private componentResolver: ComponentFactoryResolver, protected viewContainerRef: ViewContainerRef) { }
 
   public addComponent(ej2Component: any) {
     let componentFactory = this.componentResolver.resolveComponentFactory(ej2Component);
     const ref = this.viewContainerRef.createComponent(componentFactory);
-    document.getElementById("iframe").appendChild(ref.location.nativeElement)
+    let element = ref.location.nativeElement.firstElementChild;
+    document.getElementById("iframe").appendChild(element)
+    this.ej2Elements += element.outerHTML + '\n';
+
   }
   public dragstart(e: any) {
     e.dataTransfer.setData("text", e.target.id)
@@ -27,18 +41,29 @@ public components: string[] =[];
   }
   public drop(e: any) {
     let id = e.dataTransfer.getData("text")
-    switch(id){
+    switch (id) {
+      case 'grid':
+        this.addComponent(ej2GridComponent);
+        break;
+      case 'chart':
+        this.addComponent(ej2ChartComponent);
+        break;
       case 'button':
-      this.addComponent(ej2ButtonComponent);
-      this.components.push(id);
-      break;
+        this.addComponent(ej2ButtonComponent);
+        break;
       case 'datepicker':
-      this.addComponent(ej2datepickerComponent)
-      this.components.push(id);
-      break;
+        this.addComponent(ej2datepickerComponent)
+        break;
+      case 'dropdown':
+        this.addComponent(ej2DropdownComponent)
+        break;
+      case 'toolbar':
+        this.addComponent(ej2ToolbarComponent)
+        break;
     }
 
   }
+
 
   // Property Panel
 
@@ -79,6 +104,48 @@ public components: string[] =[];
     this.createPropertiesElement(this.curInst.properties);
   }
 
+<<<<<<< HEAD
+=======
+  // Property Panel
+
+  private curInst: any;
+  private props: Array<string> = ['locale', 'cssClass', 'iconCss', 'floatLabelType', 'strictMode', 'showClearButton'];
+
+  clickHandler(e: Event) {
+    if ((e.target as Element).closest('.e-btn')) {
+      this.createInstance((e.target as Element).closest('.e-btn'), '.e-btn');
+    } else if ((e.target as Element).closest('.e-input')) {
+      this.createInstance((e.target as Element).closest('.e-input'), '.e-input');
+    } else if ((e.target as Element).closest('.e-chart')) {
+      this.createInstance((e.target as Element).closest('.e-chart'), '.e-chart');
+    } else if ((e.target as Element).closest('.e-grid')) {
+      this.createInstance((e.target as Element).closest('.e-grid'), '.e-grid');
+    } else if ((e.target as Element).closest('.e-input-group')) {
+      this.createInstance((e.target as Element).closest('.e-input-group'), '.e-input-group');
+    } else if ((e.target as Element).closest('.e-dialog')) {
+      this.createInstance((e.target as Element).closest('.e-dialog'), '.e-dialog');
+    } else if ((e.target as Element).closest('.e-listview')) {
+      this.createInstance((e.target as Element).closest('.e-listview'), '.e-listview');
+    } else if ((e.target as Element).closest('.e-accordion')) {
+      this.createInstance((e.target as Element).closest('.e-accordion'), '.e-accordion');
+    } else if ((e.target as Element).closest('.e-toolbar')) {
+      this.createInstance((e.target as Element).closest('.e-toolbar'), '.e-toolbar');
+    } else if ((e.target as Element).closest('.e-tab')) {
+      this.createInstance((e.target as Element).closest('.e-tab'), '.e-tab');
+    } else if ((e.target as Element).closest('.e-treeview')) {
+      this.createInstance((e.target as Element).closest('.e-treeview'), '.e-treeview');
+    }
+  }
+
+  private createInstance(ele: any, className: string) {
+    if (this.isSameInstance((ele as any).closest(className))) {
+      return;
+    }
+    this.curInst = (ele as any).closest(className).ej2_instances[0];
+    this.createPropertiesElement(this.curInst.properties);
+  }
+
+>>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
   private isSameInstance(ele: any) {
     return ele.ej2_instances[0] === this.curInst;
   }
@@ -87,7 +154,11 @@ public components: string[] =[];
     let ele: Element = document.getElementById('propertypanel');
     let inputEle: Element;
     let isApplicable: boolean;
+<<<<<<< HEAD
+    let parentDiv: Element = createElement('div', { className: 'e-parent-group' });
+=======
     let parentDiv: Element = createElement('div', { className: 'e-parent-group' } );
+>>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
     ele.innerHTML = '';
     ele.appendChild(parentDiv);
     for (let key in objModel) {
@@ -118,7 +189,11 @@ public components: string[] =[];
           td.appendChild(inputEle);
           tr.appendChild(td);
           this.addEventListener(inputEle);
+<<<<<<< HEAD
+          new CheckBox({ checked: this.curInst[key] }, inputEle as HTMLInputElement);
+=======
           new CheckBox({checked:this.curInst[key]}, inputEle as HTMLInputElement);
+>>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
         }
       }
     }
@@ -128,7 +203,11 @@ public components: string[] =[];
     EventHandler.add(ele, 'change', this.changeHandler, this);
   }
 
+<<<<<<< HEAD
+  addInputEventLister(ele: Element) {
+=======
   addInputEventLister(ele: Element){
+>>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
     EventHandler.add(ele, 'focus', this.focusIn, this);
     EventHandler.add(ele, 'blur', this.focusOut, this);
   }
@@ -142,6 +221,17 @@ public components: string[] =[];
     }
   }
 
+<<<<<<< HEAD
+  //Focus Event function for input component
+  public focusIn(target: any): void {
+    target.currentTarget.parentElement.classList.add('e-input-focus');
+  }
+
+  //FocusOut Event function for input component
+  public focusOut(target: any): void {
+    target.currentTarget.parentElement.classList.remove('e-input-focus');
+  }
+=======
    //Focus Event function for input component
     public focusIn(target: any): void {
         target.currentTarget.parentElement.classList.add('e-input-focus');
@@ -151,5 +241,6 @@ public components: string[] =[];
     public focusOut(target: any): void {
         target.currentTarget.parentElement.classList.remove('e-input-focus');
     }
+>>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
 
 }

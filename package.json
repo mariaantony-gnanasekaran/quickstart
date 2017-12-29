@@ -35,13 +35,17 @@
     "@syncfusion/ej2": "^15.4.23",
     "@syncfusion/ej2-ng-buttons": "^15.4.23",
     "@syncfusion/ej2-ng-calendars": "^15.4.23",
+    "@syncfusion/ej2-ng-charts": "^15.4.23",
+    "@syncfusion/ej2-ng-dropdowns": "^15.4.23",
+    "@syncfusion/ej2-ng-grids": "^15.4.23",
+    "@syncfusion/ej2-ng-navigations": "^15.4.23",
     "angular-in-memory-web-api": "~0.3.0",
     "core-js": "^2.4.1",
+    "express": "*",
+    "express-easy-zip": "*",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
-    "zone.js": "^0.8.4",
-    "express": "*",
-    "express-easy-zip": "*"
+    "zone.js": "^0.8.4"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",
