@@ -57,14 +57,14 @@ body{
 .viewHeaderMiddle, .propertyHeaderMiddle{
   text-align: center;
   height: 28px;
-  top: 48px;
+  top: 0;
   width: 100% !important;
   z-index: 5;
   color: #9096a5;
 }
 
 .propertyHeaderMiddle {
-  width: 25% !important;
+  width: 100% !important;
   color: #9096a5;
 }
 
