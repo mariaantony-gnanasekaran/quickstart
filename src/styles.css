@@ -38,21 +38,26 @@ body{
 }
 
 .header .prespective{
-  top:7px;
-  color:#fff;
-  font-size: 30px;
+  top: 12px;
+  color: #fff;
+  font-size: 25px;
   text-align: center;
+}
+.active{
+  border-bottom: 1px solid;
+}
+.viewChange{
+  height: 30px;
+  width: 40px;
 }
 .header,.content{
   border-bottom: 1px solid #dddada;
 }
-<<<<<<< HEAD
-.viewHeader{
-=======
-.viewHeader{  
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
+.viewHeader{    
   border-right: 1px solid #dddada;
+  border-bottom: 1px solid #dddada;
   text-align: center;
+  padding: 2px 0 2px 20px;
   width: 100%;
   color: #9096a5;
   font-size: 18px;
@@ -168,10 +173,10 @@ content: "\e7d9"
   float: right;
   margin: 10px 0 0 0;
   color: #3f51b5;
-}
+} 
 
 .e-btn .e-download-icon {
-  font-size: 15px;
+  font-size: 15px;  
 }
 
 .e-btn:focus, .e-btn:hover, .e-btn:active {
@@ -239,6 +244,9 @@ content: "\e7d9"
 .glyphicon-eye-open:before {
   content: "\e105";
 }
+.glyphicon-phone:before {
+  content: "\e145";
+}
 
   .switchbtns {
     height: 40px;
@@ -253,11 +261,7 @@ content: "\e7d9"
     display: inline-block;
     padding: 4px 16px;
     font-size: 18px;
-<<<<<<< HEAD
-    font-weight: 300;
-=======
     font-weight: 300; 
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
     -webkit-font-smoothing: antialiased;
     transition: .2s color, .2s background-color;
     text-decoration: none;
@@ -266,13 +270,8 @@ content: "\e7d9"
   .platform-preview .platform-toggle a.active, .platform-preview .platform-toggle a:active, .platform-preview .platform-toggle a:hover {
     border-bottom: 1px solid #3f51b5;
     color: #337ab7;
-<<<<<<< HEAD
-  }
-
-=======
   } 
   
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
   .sb-icon-listview:before {
     content: '\e917';
   }
@@ -296,32 +295,18 @@ content: "\e7d9"
       font-size: 25px;
     }
   }
-<<<<<<< HEAD
-
-
-
-=======
   
 
      
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
 #propertypanel label{
   font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
   font-weight: 300;
   }
-<<<<<<< HEAD
-
-  #propertypanel .row {
-  height: 50px;
-  }
-
-=======
    
   #propertypanel .row {
   height: 50px;
   }
    
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
   #propertypanel {
   margin-top: 50px;
   overflow-y: scroll;

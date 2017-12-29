@@ -35,6 +35,18 @@
        "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
        "@syncfusion/ej2-ng-base": "syncfusion:ej2-ng-base/dist/ej2-ng-base.umd.min.js",
        "@syncfusion/ej2-ng-calendars": "syncfusion:ej2-ng-calendars/dist/ej2-ng-calendars.umd.min.js",
+       "@syncfusion/ej2-excel-export": "syncfusion:ej2-excel-export/dist/ej2-excel-export.umd.min.js",
+        "@syncfusion/ej2-pdf-export": "syncfusion:ej2-pdf-export/dist/ej2-pdf-export.umd.min.js",
+        "@syncfusion/ej2-compression": "syncfusion:ej2-compression/dist/ej2-compression.umd.min.js",
+        "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
+        "@syncfusion/ej2-grids": "syncfusion:ej2-grids/dist/ej2-grids.umd.min.js",
+        "@syncfusion/ej2-ng-grids": "syncfusion:ej2-ng-grids/dist/ej2-ng-grids.umd.min.js",
+        "@syncfusion/ej2-dropdowns": "syncfusion:ej2-dropdowns/dist/ej2-dropdowns.umd.min.js",
+        "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
+        "@syncfusion/ej2-charts": "node_modules/@syncfusion/ej2-charts/dist/ej2-charts.umd.min.js",
+        "@syncfusion/ej2-ng-charts": "node_modules/@syncfusion/ej2-ng-charts/dist/ej2-ng-charts.umd.min.js",
+        "@syncfusion/ej2-ng-navigations": "syncfusion:ej2-ng-navigations/dist/ej2-ng-navigations.umd.min.js",
+        '@syncfusion/ej2-ng-dropdowns': 'syncfusion:ej2-ng-dropdowns/dist/ej2-ng-dropdowns.umd.min.js',
 
       // other libraries
       'rxjs':                      'npm:rxjs',

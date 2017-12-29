@@ -1,5 +1,4 @@
 import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
-<<<<<<< HEAD
 import { createElement, EventHandler } from '@syncfusion/ej2-base';
 import { CheckBox } from '@syncfusion/ej2-ng-buttons';
 import { ej2ButtonComponent } from './button.component';
@@ -8,12 +7,6 @@ import { ej2GridComponent } from './grid.component';
 import { ej2ChartComponent } from './chart.component';
 import { ej2DropdownComponent } from './dropdown.component';
 import { ej2ToolbarComponent } from './toolbar.component';
-=======
-import { ej2ButtonComponent } from './button.component'
-import { ej2datepickerComponent } from './datepicker.component'
-import { CheckBox } from '@syncfusion/ej2-ng-buttons';
-import { createElement, EventHandler } from '@syncfusion/ej2-base';
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
 
 @Component({
   selector: 'my-app',
@@ -104,48 +97,6 @@ export class AppComponent {
     this.createPropertiesElement(this.curInst.properties);
   }
 
-<<<<<<< HEAD
-=======
-  // Property Panel
-
-  private curInst: any;
-  private props: Array<string> = ['locale', 'cssClass', 'iconCss', 'floatLabelType', 'strictMode', 'showClearButton'];
-
-  clickHandler(e: Event) {
-    if ((e.target as Element).closest('.e-btn')) {
-      this.createInstance((e.target as Element).closest('.e-btn'), '.e-btn');
-    } else if ((e.target as Element).closest('.e-input')) {
-      this.createInstance((e.target as Element).closest('.e-input'), '.e-input');
-    } else if ((e.target as Element).closest('.e-chart')) {
-      this.createInstance((e.target as Element).closest('.e-chart'), '.e-chart');
-    } else if ((e.target as Element).closest('.e-grid')) {
-      this.createInstance((e.target as Element).closest('.e-grid'), '.e-grid');
-    } else if ((e.target as Element).closest('.e-input-group')) {
-      this.createInstance((e.target as Element).closest('.e-input-group'), '.e-input-group');
-    } else if ((e.target as Element).closest('.e-dialog')) {
-      this.createInstance((e.target as Element).closest('.e-dialog'), '.e-dialog');
-    } else if ((e.target as Element).closest('.e-listview')) {
-      this.createInstance((e.target as Element).closest('.e-listview'), '.e-listview');
-    } else if ((e.target as Element).closest('.e-accordion')) {
-      this.createInstance((e.target as Element).closest('.e-accordion'), '.e-accordion');
-    } else if ((e.target as Element).closest('.e-toolbar')) {
-      this.createInstance((e.target as Element).closest('.e-toolbar'), '.e-toolbar');
-    } else if ((e.target as Element).closest('.e-tab')) {
-      this.createInstance((e.target as Element).closest('.e-tab'), '.e-tab');
-    } else if ((e.target as Element).closest('.e-treeview')) {
-      this.createInstance((e.target as Element).closest('.e-treeview'), '.e-treeview');
-    }
-  }
-
-  private createInstance(ele: any, className: string) {
-    if (this.isSameInstance((ele as any).closest(className))) {
-      return;
-    }
-    this.curInst = (ele as any).closest(className).ej2_instances[0];
-    this.createPropertiesElement(this.curInst.properties);
-  }
-
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
   private isSameInstance(ele: any) {
     return ele.ej2_instances[0] === this.curInst;
   }
@@ -154,11 +105,7 @@ export class AppComponent {
     let ele: Element = document.getElementById('propertypanel');
     let inputEle: Element;
     let isApplicable: boolean;
-<<<<<<< HEAD
     let parentDiv: Element = createElement('div', { className: 'e-parent-group' });
-=======
-    let parentDiv: Element = createElement('div', { className: 'e-parent-group' } );
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
     ele.innerHTML = '';
     ele.appendChild(parentDiv);
     for (let key in objModel) {
@@ -189,11 +136,7 @@ export class AppComponent {
           td.appendChild(inputEle);
           tr.appendChild(td);
           this.addEventListener(inputEle);
-<<<<<<< HEAD
           new CheckBox({ checked: this.curInst[key] }, inputEle as HTMLInputElement);
-=======
-          new CheckBox({checked:this.curInst[key]}, inputEle as HTMLInputElement);
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
         }
       }
     }
@@ -203,11 +146,7 @@ export class AppComponent {
     EventHandler.add(ele, 'change', this.changeHandler, this);
   }
 
-<<<<<<< HEAD
   addInputEventLister(ele: Element) {
-=======
-  addInputEventLister(ele: Element){
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
     EventHandler.add(ele, 'focus', this.focusIn, this);
     EventHandler.add(ele, 'blur', this.focusOut, this);
   }
@@ -221,7 +160,6 @@ export class AppComponent {
     }
   }
 
-<<<<<<< HEAD
   //Focus Event function for input component
   public focusIn(target: any): void {
     target.currentTarget.parentElement.classList.add('e-input-focus');
@@ -231,16 +169,5 @@ export class AppComponent {
   public focusOut(target: any): void {
     target.currentTarget.parentElement.classList.remove('e-input-focus');
   }
-=======
-   //Focus Event function for input component
-    public focusIn(target: any): void {
-        target.currentTarget.parentElement.classList.add('e-input-focus');
-    }
-
-    //FocusOut Event function for input component
-    public focusOut(target: any): void {
-        target.currentTarget.parentElement.classList.remove('e-input-focus');
-    }
->>>>>>> fde244569e93f9be4fd368e64869dfdc791ba6f3
 
 }
