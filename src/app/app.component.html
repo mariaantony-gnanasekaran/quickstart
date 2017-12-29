@@ -122,11 +122,16 @@
     </div>
     <div class="col-md-6 padding0 sidebarSection viewHeaderContainer">
         
-    <div class="viewHeaderMiddle">
-            <span>Device</span>
+        <div class="viewHeaderMiddle">
+            <div class="switchbtns">
+                <div class="platform-preview"> <div class="platform-toggle">
+                    <a onclick="setPlatform('ios', event)" class="active">iOS</a>
+                    <a onclick="setPlatform('android', event)" class="">Android</a>
+                    <a onclick="setPlatform('windows', event)" class="">Windows</a>
+                </div></div>
+            </div>
         </div>
-    
-        <div id="appContainer">
+        <div id="appContainer" class="ios">
             <div id="appContent" frameborder="0" tabindex="1" (dragover)="dragover($event)" (drop)="drop($event)">
                 <div id="iframe"></div>
             </div>
